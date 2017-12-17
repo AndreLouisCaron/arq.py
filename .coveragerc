@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+
+[run]
+branch = True
+source = arq
+
+[paths]
+source =
+   src/arq
+   .tox/*/lib/python*/site-packages/arq
+   .tox/pypy*/site-packages/arq
+   .tox/*/site-packages/arq
