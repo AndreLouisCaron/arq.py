@@ -16,6 +16,19 @@ not use this to build a DIY TCP-over-UDP in any serious application :-)
 
 .. _ARQ: https://en.wikipedia.org/wiki/Automatic_repeat_request
 
+ARQ Implementations
+===================
+
+Stop and wait
+-------------
+
+The `Stop-and-wait ARQ`_ is the simplest of all.  The receive emits and ACK
+packet upon reception of a data packet.  The sender retransmits outbound
+packets at regular intervals until it receives and acknowledgement from its
+peer.
+
+.. _`Stop-and-wait ARQ`: https://en.wikipedia.org/wiki/Stop-and-wait_ARQ
+
 License
 =======
 
