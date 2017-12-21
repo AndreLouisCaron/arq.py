@@ -9,6 +9,7 @@ from contextlib import (
     closing,
     contextmanager,
 )
+from datetime import timedelta
 
 
 @contextmanager
@@ -32,6 +33,13 @@ def concurrently(function, *args, **kwds):
         yield task
     finally:
         task.kill()
+
+
+def to_seconds(timeout):
+    """Convert the timeout to seconds."""
+    if isinstance(timeout, timedelta):
+        timeout = timeout.total_seconds()
+    return timeout
 
 
 __all__ = (
