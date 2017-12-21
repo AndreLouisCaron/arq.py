@@ -2,6 +2,7 @@
 
 [run]
 branch = True
+concurrency = gevent
 source = arq
 
 [paths]
